@@ -1,0 +1,442 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Net2._2Identity</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimal-ui">
+        <title>Veltrix - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta content="Admin Dashboard" name="description">
+        <meta content="Themesbrand" name="author">
+        <link rel="shortcut icon" href="~/assets/images/favicon.ico">
+        <!--Chartist Chart CSS -->
+        <link rel="stylesheet" href="../plugins/chartist/css/chartist.min.css">
+        <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="~/assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+        <link href="~/assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="~/assets/css/style.css" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="assets/images/favicon.ico"><!-- DataTables -->
+        <link href="~/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+        <link href="~/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+        <!-- Responsive datatable examples -->
+        <link href="~/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+        <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="~/assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+        <link href="~/assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="~/assets/css/style.css" rel="stylesheet" type="text/css">
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+        
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Top Bar Start -->
+        <div class="topbar">
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <a href="index.html" class="logo">
+                    <span>
+                        <img src="~/assets/images/logo-light.png" alt="" height="18">
+                        @*<img src="~/img/tsplogo.jpeg" alt="" height="50" />*@
+                    </span>
+                    <i>
+                        <img src="~/assets/images/logo-sm.png" alt="" height="22">
+                        @*<img src="~/img/tsplogo.jpeg" alt="" height="50"/>*@
+                    </i>
+                </a>
+            </div>
+            <nav class="navbar-custom">
+                <ul class="navbar-right list-inline float-right mb-0">
+                    <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
+                        <form role="search" class="app-search">
+                            <div class="form-group mb-0">
+                                <input type="text" class="form-control" placeholder="Search..">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </form>
+                    </li><!-- language-->
+                    <!-- full screen -->
+                    <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
+                        <a class="nav-link waves-effect" href="#" id="btn-fullscreen">
+                            <i class="mdi mdi-fullscreen noti-icon"></i>
+                        </a>
+                    </li>
+                    <!-- notification -->
+                    <li class="dropdown notification-list list-inline-item">
+                        <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#"
+                           role="button" aria-haspopup="false" aria-expanded="false">
+                            <i class="mdi mdi-bell-outline noti-icon"></i> <span class="badge badge-pill badge-danger noti-icon-badge">3</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+                            <!-- item-->
+                            <h6 class="dropdown-item-text">Notifications (258)</h6>
+                            <div class="slimscroll notification-item-list">
+                                <!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item active">
+                                    <div class="notify-icon bg-success"><i class="mdi mdi-cart-outline"></i></div>
+                                    <p class="notify-details">
+                                        Your order is placed
+                                        <span class="text-muted">
+                                            Dummy text of the printing and typesetting industry.
+                                        </span>
+                                    </p>
+                                </a><!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-warning">
+                                        <i class="mdi mdi-message-text-outline"></i>
+                                    </div>
+                                    <p class="notify-details">
+                                        New Message received
+                                        <span class="text-muted">
+                                            You have 87 unread messages
+                                        </span>
+                                    </p>
+                                </a><!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-info"><i class="mdi mdi-glass-cocktail"></i></div>
+                                    <p class="notify-details">
+                                        Your item is shipped
+                                        <span class="text-muted">
+                                            It is a long
+                                            established fact that a reader will
+                                        </span>
+                                    </p>
+                                </a><!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
+                                    <p class="notify-details">
+                                        Your order is placed
+                                        <span class="text-muted">
+                                            Dummy text of
+                                            the printing and typesetting industry.
+                                        </span>
+                                    </p>
+                                </a><!-- item-->
+                                <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="notify-icon bg-danger">
+                                        <i class="mdi mdi-message-text-outline"></i>
+                                    </div>
+                                    <p class="notify-details">
+                                        New Message received
+                                        <span class="text-muted">
+                                            You have 87
+                                            unread messages
+                                        </span>
+                                    </p>
+                                </a>
+                            </div><!-- All-->
+                            <a href="javascript:void(0);"
+                               class="dropdown-item text-center text-primary">
+                                View all <i class="fi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="dropdown notification-list list-inline-item">
+                        <div class="dropdown notification-list nav-pro-img">
+                            <a class="dropdown-toggle nav-link arrow-none waves-effect nav-user" data-toggle="dropdown"
+                               href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                <img src="~/assets/images/users/user-4.jpg" alt="user" class="rounded-circle">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right profile-dropdown">
+                                <!-- item-->
+                                <a class="dropdown-item" href="#">
+                                    <i class="mdi mdi-account-circle m-r-5"></i> Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="mdi mdi-wallet m-r-5"></i> My Wallet
+                                </a>
+                                <a class="dropdown-item d-block" href="#">
+                                    <span class="badge badge-success float-right">11</span><i class="mdi mdi-settings m-r-5"></i> Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="mdi mdi-lock-open-outline m-r-5"></i> Lock screen
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="#">
+                                    <i class="mdi mdi-power text-danger"></i> Logout
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list-inline menu-left mb-0">
+                    <li class="float-left">
+                        <button class="button-menu-mobile open-left waves-effect">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        <!-- Top Bar End -->
+        <!-- Top Bar End -->
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <div class="slimscroll-menu" id="remove-scroll">
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+                    <!-- Left Menu Start -->
+                    <ul class="metismenu" id="side-menu">
+                        <li class="menu-title">Main</li>
+                        <li>
+                            <a asp-controller="Home" asp-action="Index" class="waves-effect">
+                                <i class="ti-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-action="Index" asp-controller="Users" class="waves-effect">
+                                <i class="fas fa-users"></i>
+                                <span>
+                                    User
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect">
+                                <i class="ti-calendar"></i>
+                                <span>
+                                    Major Activities
+                                    <span class="float-right menu-arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a asp-action="Index" asp-controller="MajorActivities"> Main Service</a></li>
+                                <li><a href="email-inbox.html">House Fellowship</a></li>
+                                <li><a href="email-read.html">Sunday School</a></li>
+                                <li><a href="email-compose.html">Evanglism</a></li>
+                                <li><a href="email-compose.html">Digging Deep</a></li>
+                                <li><a href="email-compose.html">Faith Clinic</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect">
+                                <i class="fas fa-user-tag"></i>
+                                <span>
+                                    Workers Categories
+                                    <span class="float-right menu-arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="email-inbox.html">Ministers</a></li>
+                                <li><a href="email-read.html">H O Ds</a></li>
+                                <li><a href="email-read.html">Workers</a></li>
+                                <li><a href="email-read.html"> Workers In Training</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-title">Components</li>
+                        <li>
+                            <a asp-action="Index" asp-controller="Departments" class="waves-effect">
+                                <i class="ti-calendar"></i>
+                                <span>
+                                    Departments
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect">
+                                <i class="ti-receipt"></i>
+                                <span>
+                                    Groups Bio
+                                    <span class="float-right menu-arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a asp-action="Index" asp-controller="GroupsBio">Men</a></li>
+                                <li><a asp-action="Women" asp-controller="GroupsBio">Women</a></li>
+                                <li><a asp-action="Youths" asp-controller="GroupsBio">Youths</a></li>
+                                <li><a asp-action="Teenagers" asp-controller="GroupsBio"> Teenagers </a></li>
+                                <li><a asp-action="Children" asp-controller="GroupsBio"> Children </a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect">
+                                <i class="ti-receipt"></i>
+                                <span>
+                                    New Belivers
+                                    <span class="float-right menu-arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="form-elements.html"> First Timers</a></li>
+                                <li><a href="form-validation.html"> New Converts </a></li>
+                                <li><a href="form-advanced.html">Form Advanced</a></li>
+                                <li><a href="form-editors.html">Form Editors</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a asp-action="Index" asp-controller="Programme" class="waves-effect">
+                                <i class="ti-calendar"></i>
+                                <span>
+                                    Programme
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title">Extras</li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect">
+                                <i class="ti-archive"></i>
+                                <span>
+                                    Notifications
+                                    <span class="float-right menu-arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="pages-login.html">Login 1</a></li>
+                                <li><a href="pages-login-2.html">Login 2</a></li>
+                                <li><a href="pages-register.html">Register 1</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect">
+                                <i class="fab fa-weixin"></i>
+                                <span>
+                                    Messages
+                                    <span class="float-right menu-arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="pages-timeline.html">Timeline</a></li>
+                                <li><a href="pages-invoice.html">Invoice</a></li>
+                                <li><a href="pages-directory.html">Directory</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="waves-effect">
+                                <i class="ti-bookmark-alt"></i>
+                                <span>
+                                    Request
+                                    <span class="float-right menu-arrow">
+                                        <i class="mdi mdi-chevron-right"></i>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="email-template-basic.html">Basic Action Email</a></li>
+                                <li><a href="email-template-Alert.html">Alert Email</a></li>
+                                <li><a href="email-template-Billing.html">Billing Email</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- Sidebar -->
+                <div class="clearfix"></div>
+            </div><!-- Sidebar -left -->
+        </div><!-- Left Sidebar End -->
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+
+            @RenderBody()
+
+        </div>
+
+        <footer class="border-top footer text-muted">
+            <div class="container">
+                &copy; 2019 - RCCG TSP CRM - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+        </footer>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Start right Content here -->
+    <!-- ============================================================== -->
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <!-- jQuery  -->
+        <script src="~/assets/js/jquery.min.js"></script>
+        <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="~/assets/js/metisMenu.min.js"></script>
+        <script src="~/assets/js/jquery.slimscroll.js"></script>
+        <script src="~/assets/js/waves.min.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- jQuery  -->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/metisMenu.min.js"></script>
+    <script src="~/assets/js/jquery.slimscroll.js"></script>
+    <script src="~/assets/js/waves.min.js"></script>
+    <!--Chartist Chart-->
+    <script src="~/plugins/chartist/js/chartist.min.js"></script>
+    <script src="~/plugins/chartist/js/chartist-plugin-tooltip.min.js"></script><!-- peity JS -->
+    <script src="~/plugins/peity-chart/jquery.peity.min.js"></script>
+    <script src="~/assets/pages/dashboard.js"></script><!-- App js -->
+    <script src="~/assets/js/app.js"></script>
+    @RenderSection("Scripts", required: false)
+
+
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/metisMenu.min.js"></script>
+    <script src="~/assets/js/jquery.slimscroll.js"></script>
+    <script src="~/assets/js/waves.min.js"></script>
+
+ 
+
+    <script src="~/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/plugins/datatables/dataTables.bootstrap4.min.js"></script><!-- Buttons examples -->
+    <script src="~/plugins/datatables/dataTables.buttons.min.js"></script>
+    <script src="~/plugins/datatables/buttons.bootstrap4.min.js"></script>
+    <script src="~/plugins/datatables/jszip.min.js"></script>
+    <script src="~/plugins/datatables/pdfmake.min.js"></script>
+    <script src="~/plugins/datatables/vfs_fonts.js"></script>
+    <script src="~/plugins/datatables/buttons.html5.min.js"></script>
+    <script src="~/plugins/datatables/buttons.print.min.js"></script>
+    <script src="~/plugins/datatables/buttons.colVis.min.js"></script><!-- Responsive examples -->
+    <script src="~/plugins/datatables/dataTables.responsive.min.js"></script>
+    <script src="~/plugins/datatables/responsive.bootstrap4.min.js"></script><!-- Datatable init js -->
+    <!-- Calender-->
+
+
+    <script src="~/assets/js/waves.min.js"></script><!-- Jquery-Ui -->
+    <script src="~/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/plugins/moment/moment.js"></script>
+    <script src="~/plugins/fullcalendar/js/fullcalendar.min.js"></script>
+    <script src="~/assets/pages/calendar-init.js"></script><!-- App js -->
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
