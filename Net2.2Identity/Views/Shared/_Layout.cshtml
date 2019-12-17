@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Net2._2Identity</title>
+    <title>@ViewData["Title"] - RCCG_TSP</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -119,8 +119,7 @@
                                     <p class="notify-details">
                                         Your order is placed
                                         <span class="text-muted">
-                                            Dummy text of
-                                            the printing and typesetting industry.
+                                            Dummy text of the printing and typesetting industry.
                                         </span>
                                     </p>
                                 </a><!-- item-->
@@ -151,11 +150,11 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right profile-dropdown">
                                 <!-- item-->
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" asp-action="Profile" asp-controller="Users">
                                     <i class="mdi mdi-account-circle m-r-5"></i> Profile
                                 </a>
                                 <a class="dropdown-item" href="#">
-                                    <i class="mdi mdi-wallet m-r-5"></i> My Wallet
+                                    <i class="mdi mdi-wallet m-r-5"></i> Change Password
                                 </a>
                                 <a class="dropdown-item d-block" href="#">
                                     <span class="badge badge-success float-right">11</span><i class="mdi mdi-settings m-r-5"></i> Settings
@@ -216,19 +215,17 @@
                                 </span>
                             </a>
                             <ul class="submenu">
-                                <li><a asp-action="Index" asp-controller="MajorActivities"> Main Service</a></li>
+                                <li><a asp-action="Index" asp-controller="MajorActivities"> Main Services</a></li>
                                 <li><a href="email-inbox.html">House Fellowship</a></li>
-                                <li><a href="email-read.html">Sunday School</a></li>
-                                <li><a href="email-compose.html">Evanglism</a></li>
-                                <li><a href="email-compose.html">Digging Deep</a></li>
-                                <li><a href="email-compose.html">Faith Clinic</a></li>
+                                <li><a asp-action="Evanglism" asp-controller="MajorActivities">Evanglism</a></li>                                
+                                <li><a asp-action="Categories" asp-controller="MajorActivities">Categories</a></li>                                
                             </ul>
                         </li>
                         <li>
                             <a href="javascript:void(0);" class="waves-effect">
                                 <i class="fas fa-user-tag"></i>
                                 <span>
-                                    Workers Categories
+                                    Workers 
                                     <span class="float-right menu-arrow">
                                         <i class="mdi mdi-chevron-right"></i>
                                     </span>
@@ -254,7 +251,7 @@
                             <a href="javascript:void(0);" class="waves-effect">
                                 <i class="ti-receipt"></i>
                                 <span>
-                                    Groups Bio
+                                    Groups 
                                     <span class="float-right menu-arrow">
                                         <i class="mdi mdi-chevron-right"></i>
                                     </span>

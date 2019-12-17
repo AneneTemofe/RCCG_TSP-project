@@ -12,5 +12,10 @@ namespace RCCG_TSP_CRM.Controllers
         {
             return View();
         }
+
+        public IActionResult Categories()
+        {
+            return View();
+        }
     }
 }
